@@ -1,5 +1,15 @@
 function balancingParentheses(string) {
-  // type your code here
+  let splitString = string.split('');
+  let diff = 0;
+  for (const char of splitString) {
+    if (char === '(') {
+      diff++;
+    } else {
+      diff--;
+    }
+  }
+  return Math.abs(diff)
+
 }
 
 if (require.main === module) {
